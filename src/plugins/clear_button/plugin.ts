@@ -23,8 +23,9 @@ export default function(this:TomSelect, userOptions:CBOptions) {
 	const options = Object.assign({
 		className: 'clear-button',
 		title: 'Clear All',
+		label: '&#10799;',
 		html: (data:CBOptions) => {
-			return `<div class="${data.className}" title="${data.title}">&#10799;</div>`;
+			return `<div class="${data.className}" title="${data.title}">${data.label ?? '&#10799;'}</div>`;
 		}
 	}, userOptions);
 
